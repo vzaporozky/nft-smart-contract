@@ -9,7 +9,7 @@ async function main() {
     (await deployer.provider.getBalance(deployer.address)).toString()
   );
 
-  const MyContract = await ethers.getContractFactory("MyContract");
+  const MyContract = await ethers.getContractFactory("TokenTesetOZ");
   const contract = await MyContract.deploy("Hello, Hardhat!");
 
   console.log("Contract deployed to address:", contract.address);
