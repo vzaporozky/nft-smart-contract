@@ -3,6 +3,7 @@ import "@nomicfoundation/hardhat-toolbox";
 import "hardhat-watcher";
 import "@typechain/hardhat";
 import "hardhat-deploy";
+import "dotenv/config";
 
 const deployerPrivateKey = process.env.PRIVATE_KEY || "";
 const providerApiKey =
@@ -10,7 +11,7 @@ const providerApiKey =
 
 const config: HardhatUserConfig = {
   solidity: "0.8.28",
-  defaultNetwork: "localhost",
+  defaultNetwork: "hardhat",
   namedAccounts: {
     deployer: {
       // By default, it will take the first Hardhat account as the deployer
